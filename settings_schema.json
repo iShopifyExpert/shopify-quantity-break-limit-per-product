@@ -1,0 +1,751 @@
+  {
+    "name": "Wholesale Quantity Controller",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "display_quantity_controller",
+        "label": "Enable Quantity Controller",
+        "default": false
+      },
+      {
+        "type": "paragraph",
+        "content": "Note: This App Is Created By Aaliyan."
+      },
+      {
+        "type": "text",
+        "id": "qty_class",
+        "label": "Qty Input Class Name CSS"
+      },
+      {
+        "type": "text",
+        "id": "qty_class_dropdown",
+        "label": "Qty Opption Class Name CSS For Dropdown"
+      },
+      {
+        "type": "text",
+        "id": "max_value",
+        "label": "Max Quantity Value",
+        "info": "Max Value for All Input Box. | This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag1",
+        "label": "Enable Tag 1",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag1_dropdown",
+        "label": "Enable Tag 1 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag1",
+        "label": "Tag 1",
+        "info": "Exp: 12\/1 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag1",
+        "label": "Min Value For Tag 1",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag1",
+        "label": "Increament For Tag 1",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag1",
+        "label": "Max Value For Tag 1 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag2",
+        "label": "Enable Tag 2",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag2_dropdown",
+        "label": "Enable Tag 2 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag2",
+        "label": "Tag 2",
+        "info": "Exp: 3\/3 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag2",
+        "label": "Min Value For Tag 2",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag2",
+        "label": "Increament For Tag 2",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag2",
+        "label": "Max Value For Tag 2 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag3",
+        "label": "Enable Tag 3",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag3_dropdown",
+        "label": "Enable Tag 3 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag3",
+        "label": "Tag 3",
+        "info": "Exp: 6\/6 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag3",
+        "label": "Min Value For Tag 3",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag3",
+        "label": "Increament For Tag 3",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag3",
+        "label": "Max Value For Tag 3 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag4",
+        "label": "Enable Tag 4",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag4_dropdown",
+        "label": "Enable Tag 4 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag4",
+        "label": "Tag 4",
+        "info": "Exp: 12\/12 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag4",
+        "label": "Min Value For Tag 4",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag4",
+        "label": "Increament For Tag 4",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag4",
+        "label": "Max Value For Tag 4 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag5",
+        "label": "Enable Tag 5",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag5_dropdown",
+        "label": "Enable Tag 5 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag5",
+        "label": "Tag 5",
+        "info": "Exp: 24\/24 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag5",
+        "label": "Min Value For Tag 5",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag5",
+        "label": "Increament For Tag 5",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag5",
+        "label": "Max Value For Tag 5 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 6"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag6",
+        "label": "Enable Tag 6",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag6_dropdown",
+        "label": "Enable Tag 6 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag6",
+        "label": "Tag 6",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag6",
+        "label": "Min Value For Tag 6",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag6",
+        "label": "Increament For Tag 6",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag6",
+        "label": "Max Value For Tag 6 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 7"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag7",
+        "label": "Enable Tag 7",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag7_dropdown",
+        "label": "Enable Tag 7 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag7",
+        "label": "Tag 7",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag7",
+        "label": "Min Value For Tag 7",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag7",
+        "label": "Increament For Tag 7",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag7",
+        "label": "Max Value For Tag 7 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 8"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag8",
+        "label": "Enable Tag 8",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag8_dropdown",
+        "label": "Enable Tag 8 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag8",
+        "label": "Tag 8",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag8",
+        "label": "Min Value For Tag 8",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag8",
+        "label": "Increament For Tag 8",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag8",
+        "label": "Max Value For Tag 8 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 9"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag9",
+        "label": "Enable Tag 9",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag9_dropdown",
+        "label": "Enable Tag 9 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag9",
+        "label": "Tag 9",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag9",
+        "label": "Min Value For Tag 9",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag9",
+        "label": "Increament For Tag 9",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag9",
+        "label": "Max Value For Tag 9 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 10"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag10",
+        "label": "Enable Tag 10",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag10_dropdown",
+        "label": "Enable Tag 10 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag10",
+        "label": "Tag 10",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag10",
+        "label": "Min Value For Tag 10",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag10",
+        "label": "Increament For Tag 10",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag10",
+        "label": "Max Value For Tag 10 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 11"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag11",
+        "label": "Enable Tag 11",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag11_dropdown",
+        "label": "Enable Tag 11 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag11",
+        "label": "Tag 11",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag11",
+        "label": "Min Value For Tag 11",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag11",
+        "label": "Increament For Tag 11",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag11",
+        "label": "Max Value For Tag 11 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 12"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag12",
+        "label": "Enable Tag 12",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag12_dropdown",
+        "label": "Enable Tag 12 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag12",
+        "label": "Tag 12",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag12",
+        "label": "Min Value For Tag 12",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag12",
+        "label": "Increament For Tag 12",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag12",
+        "label": "Max Value For Tag 12 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 13"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag13",
+        "label": "Enable Tag 13",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag13_dropdown",
+        "label": "Enable Tag 13 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag13",
+        "label": "Tag 13",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag13",
+        "label": "Min Value For Tag 13",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag13",
+        "label": "Increament For Tag 13",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag13",
+        "label": "Max Value For Tag 13 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 14"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag14",
+        "label": "Enable Tag 14",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag14_dropdown",
+        "label": "Enable Tag 14 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag14",
+        "label": "Tag 14",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag14",
+        "label": "Min Value For Tag 14",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag14",
+        "label": "Increament For Tag 14",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag14",
+        "label": "Max Value For Tag 14 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 15"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag15",
+        "label": "Enable Tag 15",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag15_dropdown",
+        "label": "Enable Tag 15 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag15",
+        "label": "Tag 15",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag15",
+        "label": "Min Value For Tag 15",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag15",
+        "label": "Increament For Tag 15",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag15",
+        "label": "Max Value For Tag 15 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 16"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag16",
+        "label": "Enable Tag 16",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag16_dropdown",
+        "label": "Enable Tag 16 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag16",
+        "label": "Tag 16",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag16",
+        "label": "Min Value For Tag 16",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag16",
+        "label": "Increament For Tag 16",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag16",
+        "label": "Max Value For Tag 16 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 17"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag17",
+        "label": "Enable Tag 17",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag17_dropdown",
+        "label": "Enable Tag 17 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag17",
+        "label": "Tag 17",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag17",
+        "label": "Min Value For Tag 17",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag17",
+        "label": "Increament For Tag 17",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag17",
+        "label": "Max Value For Tag 17 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      },
+      {
+        "type": "header",
+        "content": "Quantity Set For Tag 18"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag18",
+        "label": "Enable Tag 18",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tag18_dropdown",
+        "label": "Enable Tag 18 in Dropdown",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag18",
+        "label": "Tag 18",
+        "info": "Exp: 48\/48 | (Min\/increament)"
+      },
+      {
+        "type": "text",
+        "id": "min_tag18",
+        "label": "Min Value For Tag 18",
+        "info": "If Dropdown than this should be always 1."
+      },
+      {
+        "type": "text",
+        "id": "step_tag18",
+        "label": "Increament For Tag 18",
+        "info": "If Dropdown than this should be your Minimum Value."
+      },
+      {
+        "type": "text",
+        "id": "max_tag18",
+        "label": "Max Value For Tag 18 Dropdown",
+        "info": "This value will not work if inventory is enabled."
+      }
+    ]
+  }
