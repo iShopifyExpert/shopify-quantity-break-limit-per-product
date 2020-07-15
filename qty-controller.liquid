@@ -1,0 +1,463 @@
+{% if settings.enable_tag1 and product.tags contains settings.tag1 or settings.enable_tag2 and product.tags contains settings.tag2 or settings.enable_tag3 and product.tags contains settings.tag3 or settings.enable_tag4 and product.tags contains settings.tag4 or settings.enable_tag5 and product.tags contains settings.tag5 or settings.enable_tag6 and product.tags contains settings.tag6 or settings.enable_tag7 and product.tags contains settings.tag7 or settings.enable_tag8 and product.tags contains settings.tag8 or settings.enable_tag9 and product.tags contains settings.tag9 or settings.enable_tag10 and product.tags contains settings.tag10 or settings.enable_tag11 and product.tags contains settings.tag11 or settings.enable_tag12 and product.tags contains settings.tag12 or settings.enable_tag13 and product.tags contains settings.tag13 or settings.enable_tag14 and product.tags contains settings.tag14 or settings.enable_tag15 and product.tags contains settings.tag15 or settings.enable_tag16 and product.tags contains settings.tag16 or settings.enable_tag17 and product.tags contains settings.tag17 or settings.enable_tag18 and product.tags contains settings.tag18 %}
+  {% if settings.display_quantity_controller %}
+       {% if settings.display_quantity_controller != blank %}
+          {% if settings.enable_tag1 %}
+           {% if settings.enable_tag1_dropdown %}
+            {% if product.tags contains settings.tag1 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag1..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag1 }}">{{ i | times: settings.step_tag1 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag1..settings.max_tag1) %}
+               <option value="{{ i | times: settings.step_tag1 }}">{{ i | times: settings.step_tag1 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag1 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag1 }}" min="{{ settings.min_tag1 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag1 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag1 }}" min="{{ settings.min_tag1 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag1 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag2 %}
+           {% if settings.enable_tag2_dropdown %}
+            {% if product.tags contains settings.tag2 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag2..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag2 }}">{{ i | times: settings.step_tag2 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag2..settings.max_tag2) %}
+               <option value="{{ i | times: settings.step_tag2 }}">{{ i | times: settings.step_tag2 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag2 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag2 }}" min="{{ settings.min_tag2 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag2 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag2 }}" min="{{ settings.min_tag2 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag2 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag3 %}
+           {% if settings.enable_tag3_dropdown %}
+            {% if product.tags contains settings.tag3 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag3..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag3 }}">{{ i | times: settings.step_tag3 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag3..settings.max_tag3) %}
+               <option value="{{ i | times: settings.step_tag3 }}">{{ i | times: settings.step_tag3 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag3 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag3 }}" min="{{ settings.min_tag3 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag3 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag3 }}" min="{{ settings.min_tag3 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag3 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag4 %}
+           {% if settings.enable_tag4_dropdown %}
+            {% if product.tags contains settings.tag4 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag4..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag4 }}">{{ i | times: settings.step_tag4 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag4..settings.max_tag4) %}
+               <option value="{{ i | times: settings.step_tag4 }}">{{ i | times: settings.step_tag4 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag4 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag4 }}" min="{{ settings.min_tag4 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag4 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag4 }}" min="{{ settings.min_tag4 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag4 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag5 %}
+           {% if settings.enable_tag5_dropdown %}
+            {% if product.tags contains settings.tag5 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag5..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag5 }}">{{ i | times: settings.step_tag5 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag5..settings.max_tag5) %}
+               <option value="{{ i | times: settings.step_tag5 }}">{{ i | times: settings.step_tag5 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag5 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag5 }}" min="{{ settings.min_tag5 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag5 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag5 }}" min="{{ settings.min_tag5 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag5 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag6 %}
+           {% if settings.enable_tag6_dropdown %}
+            {% if product.tags contains settings.tag6 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag6..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag6 }}">{{ i | times: settings.step_tag6 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag6..settings.max_tag6) %}
+               <option value="{{ i | times: settings.step_tag6 }}">{{ i | times: settings.step_tag6 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag6 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag6 }}" min="{{ settings.min_tag6 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag6 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag6 }}" min="{{ settings.min_tag6 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag6 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag7 %}
+           {% if settings.enable_tag7_dropdown %}
+            {% if product.tags contains settings.tag7 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag7..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag7 }}">{{ i | times: settings.step_tag7 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag7..settings.max_tag7) %}
+               <option value="{{ i | times: settings.step_tag7 }}">{{ i | times: settings.step_tag7 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag7 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag7 }}" min="{{ settings.min_tag7 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag7 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag7 }}" min="{{ settings.min_tag7 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag7 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag8 %}
+           {% if settings.enable_tag8_dropdown %}
+            {% if product.tags contains settings.tag8 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag8..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag8 }}">{{ i | times: settings.step_tag8 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag8..settings.max_tag8) %}
+               <option value="{{ i | times: settings.step_tag8 }}">{{ i | times: settings.step_tag8 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag8 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag8 }}" min="{{ settings.min_tag8 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag8 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag8 }}" min="{{ settings.min_tag8 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag8 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag9 %}
+           {% if settings.enable_tag9_dropdown %}
+            {% if product.tags contains settings.tag9 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag9..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag9 }}">{{ i | times: settings.step_tag9 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag9..settings.max_tag9) %}
+               <option value="{{ i | times: settings.step_tag9 }}">{{ i | times: settings.step_tag9 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag9 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag9 }}" min="{{ settings.min_tag9 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag9 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag9 }}" min="{{ settings.min_tag9 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag9 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag10 %}
+           {% if settings.enable_tag10_dropdown %}
+            {% if product.tags contains settings.tag10 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag10..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag10 }}">{{ i | times: settings.step_tag10 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag10..settings.max_tag10) %}
+               <option value="{{ i | times: settings.step_tag10 }}">{{ i | times: settings.step_tag10 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag10 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag10 }}" min="{{ settings.min_tag10 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag10 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag10 }}" min="{{ settings.min_tag10 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag10 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag11 %}
+           {% if settings.enable_tag11_dropdown %}
+            {% if product.tags contains settings.tag11 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag11..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag11 }}">{{ i | times: settings.step_tag11 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag11..settings.max_tag11) %}
+               <option value="{{ i | times: settings.step_tag11 }}">{{ i | times: settings.step_tag11 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag11 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag11 }}" min="{{ settings.min_tag11 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag11 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag11 }}" min="{{ settings.min_tag11 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag11 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag12 %}
+           {% if settings.enable_tag12_dropdown %}
+            {% if product.tags contains settings.tag12 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag12..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag12 }}">{{ i | times: settings.step_tag12 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag12..settings.max_tag12) %}
+               <option value="{{ i | times: settings.step_tag12 }}">{{ i | times: settings.step_tag12 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag12 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag12 }}" min="{{ settings.min_tag12 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag12 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag12 }}" min="{{ settings.min_tag12 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag12 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag13 %}
+           {% if settings.enable_tag13_dropdown %}
+            {% if product.tags contains settings.tag13 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag13..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag13 }}">{{ i | times: settings.step_tag13 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag13..settings.max_tag13) %}
+               <option value="{{ i | times: settings.step_tag13 }}">{{ i | times: settings.step_tag13 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag13 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag13 }}" min="{{ settings.min_tag13 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag13 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag13 }}" min="{{ settings.min_tag13 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag13 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag14 %}
+           {% if settings.enable_tag14_dropdown %}
+            {% if product.tags contains settings.tag14 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag14..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag14 }}">{{ i | times: settings.step_tag14 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag14..settings.max_tag14) %}
+               <option value="{{ i | times: settings.step_tag14 }}">{{ i | times: settings.step_tag14 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag14 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag14 }}" min="{{ settings.min_tag14 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag14 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag14 }}" min="{{ settings.min_tag14 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag14 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag15 %}
+           {% if settings.enable_tag15_dropdown %}
+            {% if product.tags contains settings.tag15 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag15..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag15 }}">{{ i | times: settings.step_tag15 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag15..settings.max_tag15) %}
+               <option value="{{ i | times: settings.step_tag15 }}">{{ i | times: settings.step_tag15 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag15 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag15 }}" min="{{ settings.min_tag15 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag15 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag15 }}" min="{{ settings.min_tag15 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag15 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag16 %}
+           {% if settings.enable_tag16_dropdown %}
+            {% if product.tags contains settings.tag16 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag16..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag16 }}">{{ i | times: settings.step_tag16 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag16..settings.max_tag16) %}
+               <option value="{{ i | times: settings.step_tag16 }}">{{ i | times: settings.step_tag16 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag16 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag16 }}" min="{{ settings.min_tag16 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag16 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag16 }}" min="{{ settings.min_tag16 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag16 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag17 %}
+           {% if settings.enable_tag17_dropdown %}
+            {% if product.tags contains settings.tag17 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag17..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag17 }}">{{ i | times: settings.step_tag17 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag17..settings.max_tag17) %}
+               <option value="{{ i | times: settings.step_tag17 }}">{{ i | times: settings.step_tag17 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag17 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag17 }}" min="{{ settings.min_tag17 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag17 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag17 }}" min="{{ settings.min_tag17 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag17 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag18 %}
+           {% if settings.enable_tag18_dropdown %}
+            {% if product.tags contains settings.tag18 %}
+             <select id="Quantity" name="quantity" class="{{ settings.qty_class_dropdown }}">
+             {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+              {% for i in (settings.min_tag18..variant.inventory_quantity) %}
+               <option value="{{ i | times: settings.step_tag18 }}">{{ i | times: settings.step_tag18 }}</option>
+              {% endfor %}
+             {% else %}
+              {% for i in (settings.min_tag18..settings.max_tag18) %}
+               <option value="{{ i | times: settings.step_tag18 }}">{{ i | times: settings.step_tag18 }}</option>
+              {% endfor %}
+             {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if product.tags contains settings.tag18 %}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag18 }}" min="{{ settings.min_tag18 }}" max="{{ variant.inventory_quantity }}" step="{{ settings.step_tag18 }}" class="{{ settings.qty_class }}">
+              {% else %}
+               <input type="number" id="Quantity" name="quantity" value="{{ settings.min_tag18 }}" min="{{ settings.min_tag18 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag18 }}" class="{{ settings.qty_class }}">
+              {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+       {% endif %}
+  {% else %}
+    <input type="number" id="Quantity" name="quantity" value="1" min="1" class="product-form__input qty">
+  {% endif %}
+{% else %}
+  <select id="Quantity" name="quantity" value="1" class="product-form__input qty">{% for i in (1..200) %}
+    <option selected="true" style="display:none;">Select Quantity</option>
+   	<option value="{{ i | times:  1 }}">{{ i | times:  1 }}</option>{% endfor %}
+  </select>
+{% endif %}
