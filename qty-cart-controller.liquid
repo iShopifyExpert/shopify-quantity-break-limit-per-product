@@ -1,0 +1,471 @@
+{% if settings.enable_tag1 and item.product.tags contains settings.tag1 or settings.enable_tag2 and item.product.tags contains settings.tag2 or settings.enable_tag3 and item.product.tags contains settings.tag3 or settings.enable_tag4 and item.product.tags contains settings.tag4 or settings.enable_tag5 and item.product.tags contains settings.tag5 or settings.enable_tag6 and item.product.tags contains settings.tag6 or settings.enable_tag7 and item.product.tags contains settings.tag7 or settings.enable_tag8 and item.product.tags contains settings.tag8 or settings.enable_tag9 and item.product.tags contains settings.tag9 or settings.enable_tag10 and item.product.tags contains settings.tag10 or settings.enable_tag11 and item.product.tags contains settings.tag11 or settings.enable_tag12 and item.product.tags contains settings.tag12 or settings.enable_tag13 and item.product.tags contains settings.tag13 or settings.enable_tag14 and item.product.tags contains settings.tag14 or settings.enable_tag15 and item.product.tags contains settings.tag15 or settings.enable_tag16 and item.product.tags contains settings.tag16 or settings.enable_tag17 and item.product.tags contains settings.tag17 or settings.enable_tag18 and item.product.tags contains settings.tag18 %}
+  {% if settings.display_quantity_controller %}
+       {% if settings.display_quantity_controller != blank %}
+          {% if settings.enable_tag1 %}
+           {% if settings.enable_tag1_dropdown %}
+            {% if item.product.tags contains settings.tag1 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag1..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag1..settings.max_tag1) %} {% assign q = i | times: settings.step_tag1 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag1 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag1 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag1 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag1 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag1 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag2 %}
+           {% if settings.enable_tag2_dropdown %}
+            {% if item.product.tags contains settings.tag2 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag2..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag2..settings.max_tag2) %} {% assign q = i | times: settings.step_tag2 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag2 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag2 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag2 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag2 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag2 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag3 %}
+           {% if settings.enable_tag3_dropdown %}
+            {% if item.product.tags contains settings.tag3 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag3..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag3..settings.max_tag3) %} {% assign q = i | times: settings.step_tag3 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag3 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag3 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag3 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag3 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag3 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag4 %}
+           {% if settings.enable_tag4_dropdown %}
+            {% if item.product.tags contains settings.tag4 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag4..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag4..settings.max_tag4) %} {% assign q = i | times: settings.step_tag4 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag4 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag4 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag4 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag4 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag4 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag5 %}
+           {% if settings.enable_tag5_dropdown %}
+            {% if item.product.tags contains settings.tag5 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag5..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag5..settings.max_tag5) %}{% assign q = i | times: settings.step_tag5 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag5 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag5 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag5 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag5 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag5 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag6 %}
+           {% if settings.enable_tag6_dropdown %}
+            {% if item.product.tags contains settings.tag6 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag6..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag6..settings.max_tag6) %} {% assign q = i | times: settings.step_tag6 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag6 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag6 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag6 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag6 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag6 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+
+          {% if settings.enable_tag7 %}
+           {% if settings.enable_tag7_dropdown %}
+            {% if item.product.tags contains settings.tag7 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag7..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag7..settings.max_tag7) %} {% assign q = i | times: settings.step_tag7 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag7 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag7 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag7 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag7 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag7 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag8 %}
+           {% if settings.enable_tag8_dropdown %}
+            {% if item.product.tags contains settings.tag8 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag8..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag8..settings.max_tag8) %} {% assign q = i | times: settings.step_tag8 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag8 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag8 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag8 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag8 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag8 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag9 %}
+           {% if settings.enable_tag9_dropdown %}
+            {% if item.product.tags contains settings.tag9 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag9..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag9..settings.max_tag9) %} {% assign q = i | times: settings.step_tag9 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag9 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag9 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag9 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag9 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag9 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+          {% if settings.enable_tag10 %}
+           {% if settings.enable_tag10_dropdown %}
+            {% if item.product.tags contains settings.tag10 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag10..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag10..settings.max_tag10) %} {% assign q = i | times: settings.step_tag10 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag10 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag10 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag10 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag10 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag10 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+
+          {% if settings.enable_tag11 %}
+           {% if settings.enable_tag11_dropdown %}
+            {% if item.product.tags contains settings.tag11 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag11..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag11..settings.max_tag11) %} {% assign q = i | times: settings.step_tag11 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag11 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag11 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag11 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag11 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag11 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+
+          {% if settings.enable_tag12 %}
+           {% if settings.enable_tag12_dropdown %}
+            {% if item.product.tags contains settings.tag12 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag12..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag12..settings.max_tag12) %} {% assign q = i | times: settings.step_tag12 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag12 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag12 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag12 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag12 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag12 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+
+          {% if settings.enable_tag13 %}
+           {% if settings.enable_tag13_dropdown %}
+            {% if item.product.tags contains settings.tag13 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag13..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag13..settings.max_tag13) %} {% assign q = i | times: settings.step_tag13 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag13 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag13 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag13 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag13 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag13 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+
+          {% if settings.enable_tag14 %}
+           {% if settings.enable_tag14_dropdown %}
+            {% if item.product.tags contains settings.tag14 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag14..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag14..settings.max_tag14) %} {% assign q = i | times: settings.step_tag14 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag14 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag14 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag14 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag14 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag14 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+
+          {% if settings.enable_tag15 %}
+           {% if settings.enable_tag15_dropdown %}
+            {% if item.product.tags contains settings.tag15 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag15..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag15..settings.max_tag15) %} {% assign q = i | times: settings.step_tag15 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag15 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag15 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag15 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag15 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag15 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+
+          {% if settings.enable_tag16 %}
+           {% if settings.enable_tag16_dropdown %}
+            {% if item.product.tags contains settings.tag16 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag16..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag16..settings.max_tag16) %} {% assign q = i | times: settings.step_tag16 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag16 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag16 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag16 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag16 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag16 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+
+          {% if settings.enable_tag17 %}
+           {% if settings.enable_tag17_dropdown %}
+            {% if item.product.tags contains settings.tag17 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag17..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag17..settings.max_tag17) %} {% assign q = i | times: settings.step_tag17 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag17 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag17 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag17 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag17 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag17 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+
+          {% if settings.enable_tag18 %}
+           {% if settings.enable_tag18_dropdown %}
+            {% if item.product.tags contains settings.tag18 %}
+             <select id="updates_{{ item.id }}" name="updates[]" class="{{ settings.qty_class_dropdown }}" data-id="{{ item.id }}">
+              {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+               {% for i in (settings.min_tag18..item.variant.inventory_quantity) %}
+                <option value="{{ i }}"{% if item.quantity == i %} selected{% endif %}>{{ i }}</option>
+               {% endfor %}
+              {% else %}
+               {% for i in (settings.min_tag18..settings.max_tag18) %} {% assign q = i | times: settings.step_tag18 %}
+                <option value="{{ q }}"{% if item.quantity == q %} selected{% endif %}>{{ q }}</option>
+               {% endfor %}
+              {% endif %}
+             </select>
+            {% endif %}
+           {% else %}
+            {% if item.product.tags contains settings.tag18 %}
+             {% if item.variant.inventory_management == 'shopify' and item.variant.inventory_policy == 'deny' %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag18 }}" max="{{ item.variant.inventory_quantity }}" step="{{ settings.step_tag18 }}" data-id="{{ item.id }}">
+             {% else %}
+             <input type="number" class="{{ settings.qty_class }}" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="{{ settings.min_tag18 }}" max="{{ settings.max_value }}" step="{{ settings.step_tag18 }}" data-id="{{ item.id }}">
+             {% endif %}
+            {% endif %}
+           {% endif %}
+          {% endif %}
+       {% endif %}
+  {% else %}
+   <input type="number" class="qty-selector" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="1" max="{{ settings.max_value }}" data-id="{{ item.id }}">
+  {% endif %}
+{% else %}
+ <select name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" class="cart__qty-input">{% for i in (1..200) %}
+   <option value="{{ i | times:  1 }}"{% if item.quantity == i %} selected="selected"{% endif %}>{{ i | times:  1 }}</option>{% endfor %}
+ </select>
+{% endif %}
